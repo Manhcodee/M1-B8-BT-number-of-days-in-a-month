@@ -10,20 +10,20 @@
 <p class="display">result</p>
 
 <script>
-    let thang_1 = '1'
-    let thang_2 = '2'
-    let thang_3 = '3'
-    let thang_4 = '4'
-    let thang_5 = '5'
-    let thang_6 = '6'
-    let thang_7 = '7'
-    let thang_8 = '8'
-    let thang_9 = '9'
-    let thang_10 = '10'
-    let thang_11 = '11'
-    let thang_12 = '12'
-    l
-    function result() {
+    let thang_1 = '1';
+    let thang_2 = '2';
+    let thang_3 = '3';
+    let thang_4 = '4';
+    let thang_5 = '5';
+    let thang_6 = '6';
+    let thang_7 = '7';
+    let thang_8 = '8';
+    let thang_9 = '9';
+    let thang_10 = '10';
+    let thang_11 = '11';
+    let thang_12 = '12';
+
+    /*function result() {
         let number = document.querySelector('.input').value;
         switch (number) {
             case thang_1:
@@ -43,6 +43,20 @@
                 break
             case thang_2:
                 document.querySelector('.display').innerHTML = 'Tháng ' + number + ' có 28 ngày hoặc 29 ngày'
+        }
+    };
+*/
+    // if else
+    function result() {
+        let number = document.querySelector('.input').value;
+        if (number === thang_2) {
+            document.querySelector('.display').innerHTML = 'Tháng'+ number +'có 28 ngày hoặc 29 ngày';
+        } else if (number === thang_1 || number === thang_3 || number === thang_5 || number === thang_7 || number === thang_9 || number === thang_11) {
+            document.querySelector('.display').innerHTML = 'Tháng'+ number +'có 31 ngày';
+        } else if  (number === thang_4 || number === thang_6 || number === thang_8 || number === thang_10 || number === thang_12) {
+            document.querySelector('.display').innerHTML = 'Tháng'+ number +'có 30 ngày';
+        } else {
+            document.querySelector('.display').innerHTML = 'vui lòng nhập tháng';
         }
     }
 </script>
